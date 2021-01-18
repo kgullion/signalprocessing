@@ -59,7 +59,7 @@ amplitudeSpectrum(real, imag, Fs, "myDiv");
 
 </html>
 ```
-3. In **Node**, there is no browser window. So you should create an web server to serve html file.
+3. In **Node**, there is no browser window. So you should create a web server to serve html file.
 
 - To simplify this step I am using **Parcel** and **cross-env** modules. 
 - Install and save these modules as development.
@@ -71,7 +71,7 @@ npm install cross-env --save-dev
 ```bash 
 npm install parcel-bundler --save-dev
 ```
-3. Run the script below to see results in the browser. In the first time it will build 
+3. Run the script below to see results in the browser. In the first run, it will take a few minutes to build your files.
 ```bash 
 cross-env NODE_ENV=development parcel index.html --no-hmr --open
 ```

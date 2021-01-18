@@ -1,0 +1,31 @@
+{
+  "name": "@signalprocessing/plots",
+  "version": "1.0.2",
+  "description": "plot",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=development parcel test\\index.html --no-hmr --open  "
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusufsaygili/signalprocessing.git"
+  },
+  "keywords": [
+    "plot"
+  ],
+  "author": "Yusuf Saygili",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yusufsaygili/signalprocessing/issues"
+  },
+  "homepage": "https://github.com/yusufsaygili/signalprocessing#readme",
+  "dependencies": {
+    "@signalprocessing/transforms": "^1.0.6",
+    "plotly.js-dist": "^1.58.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "parcel-bundler": "^1.12.4"
+  }
+}

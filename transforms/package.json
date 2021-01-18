@@ -1,0 +1,29 @@
+{
+  "name": "@signalprocessing/transfroms",
+  "version": "1.0.0",
+  "description": " FFT ",
+  "main": "fft.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusufsaygili/nodefft.git"
+  },
+  "keywords": [
+    "fft",
+    "fast",
+    "fourier",
+    "transform",
+    "matlab style fft"
+  ],
+  "author": "Yusuf Saygili",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yusufsaygili/nodefft/issues"
+  },
+  "homepage": "https://github.com/yusufsaygili/nodefft#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

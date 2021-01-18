@@ -1,13 +1,13 @@
 {
-  "name": "@signalprocessing/transfroms",
-  "version": "1.0.0",
+  "name": "@signalprocessing/transforms",
+  "version": "1.0.6",
   "description": " FFT ",
   "main": "fft.js",
-  "type": "module",
-  "repository": {
+   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yusufsaygili/nodefft.git"
+    "url": "git+https://github.com/yusufsaygili/signalprocessing.git"
   },
+  "type": "module",
   "keywords": [
     "fft",
     "fast",
@@ -18,9 +18,9 @@
   "author": "Yusuf Saygili",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yusufsaygili/nodefft/issues"
+    "url": "https://github.com/yusufsaygili/signalprocessing/issues"
   },
-  "homepage": "https://github.com/yusufsaygili/nodefft#readme",
+  "homepage": "https://github.com/yusufsaygili/signalprocessing#readme",
   "dependencies": {},
   "devDependencies": {},
   "scripts": {

@@ -1,4 +1,4 @@
-import { transform } from './transform.mjs'
+import { transform } from './transform.js'
 
 function fft(InputArray) {
   let input = null;

@@ -1,5 +1,5 @@
-import { fft ,ifft} from "./fourier.js"
+import { fft, ifft } from "./fourier.js"
 
-export { fft ,ifft};
+export { fft, ifft };
 
 

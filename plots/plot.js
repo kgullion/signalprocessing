@@ -4,7 +4,7 @@ function amplitudeSpectrum(realCoefficients, imagCoefficients, samplingRate, cha
   if ((realCoefficients == null) | (imagCoefficients == null) | (samplingRate == null)) {
     throw "Firstly, call FFT method";
   }
-  if (realCoefficients.length != imagCoefficients.length) {
+  if (realCoefficients.length !== imagCoefficients.length) {
     throw "Mismatched lengths";
   }
   const L = realCoefficients.length;

@@ -42,15 +42,20 @@ function fft(inputReal, inputImag = null) {
   let imag = XImag.slice();
   transform(real, imag);
 
-  return { real, imag }
+  return [real, imag]
 }
 
 
 function ifft(inputReal, inputImag) {
 
-  let { real, imag } = fft(inputImag, inputReal);
-  return { real, imag }
+  let [real, imag] = fft(inputImag, inputReal);
+  real = real.map(function (x) { return x / real.length; });
+  imag = imag.map(function (x) { return x / imag.length; });
+  return [imag, real]
 }
+
+
+
 
 export { fft, ifft };
 

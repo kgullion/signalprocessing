@@ -6,7 +6,7 @@ let Fs = 1000;
 //Sampling Period
 let T = 1 / Fs;
 //Length of signal
-let L = 4;
+let L = 1500;
 //Time array
 let t = Array.from({ length: L }, (x, i) => i * T);
 //A signal containing a 30 Hz sinusoid of amplitude 0.5 and a 100 Hz sinusoid of amplitude 1.

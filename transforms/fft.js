@@ -1,26 +1,47 @@
 import { transform } from './transform.js'
 
-function fft(InputArray) {
-  let input = null;
-  let real = null;
-  let imag = null;
-  let length = null
-  if (!Array.isArray(InputArray)) {
+function fft(inputReal, inputImag = null) {
+  let XImag = null;
+  let XReal = null;
+  let imagLength = null;
+  let realLength = null;
+
+  if (!Array.isArray(inputReal)) {
     throw "Not Array";
   }
-  let chkNumberElements = InputArray.every(function (element) { return typeof element === 'number'; });
-  if (!chkNumberElements) {
-    throw "Array must be numeric";
+
+  let chkNumberRealElements = inputReal.every(function (element) { return typeof element === 'number'; });
+  if (!chkNumberRealElements) {
+    throw "Real array must be numeric";
   }
-  input = InputArray;;
-  length = InputArray.length;
-  let XReal = input;
-  let XImag = new Array(length).fill(0);
-  let realResult = XReal.slice();
-  let imagResult = XImag.slice();
-  transform(realResult, imagResult);
-  real = realResult;
-  imag = imagResult;
+
+  realLength = inputReal.length;
+  XReal = inputReal;
+
+  if (inputImag !== null) {
+    if (!Array.isArray(inputImag)) {
+      throw "Not Array";
+    }
+    let chkNumberImagElements = inputImag.every(function (element) { return typeof element === 'number'; });
+
+    if (!chkNumberImagElements) {
+      throw "Imaginary array must be numeric";
+    }
+    imagLength = inputImag.length;
+    XImag = inputImag;
+    if (realLength !== imagLength) {
+      throw "Length of real and imaginary parts must be same"
+    }
+  } else {
+    XImag = new Array(realLength).fill(0);
+    imagLength = realLength;
+
+  }
+
+  let real = XReal.slice();
+  let imag = XImag.slice();
+  transform(real, imag);
+
   return { real, imag }
 }
 

@@ -1,18 +1,18 @@
 import Plotly from "plotly.js-dist";
 
-function amplitudeSpectrum(real, imag, Fs, chartDiv) {
-  if ((real == null) | (imag == null) | (Fs == null)) {
+function amplitudeSpectrum(realCoefficients, imagCoefficients, samplingRate, chartDiv) {
+  if ((realCoefficients == null) | (imagCoefficients == null) | (samplingRate == null)) {
     throw "Firstly, call FFT method";
   }
-  if (real.length != imag.length) {
+  if (realCoefficients.length != imagCoefficients.length) {
     throw "Mismatched lengths";
   }
-  const L = real.length;
+  const L = realCoefficients.length;
   let f = null;
-  let absVec = real.map(function (v, i) {
+  let absoluteCoefficients = realCoefficients.map(function (v, i) {
     return Math.sqrt((v / L) * (v / L) + (this[i] / L) * (this[i] / L));
-  }, imag);
-  let P1 = absVec.slice(0, L / 2 + 1);
+  }, imagCoefficients);
+  let P1 = absoluteCoefficients.slice(0, L / 2 + 1);
   let P = Array.from(P1, (x, i) => {
     if (i == 0) {
       return x;
@@ -20,7 +20,7 @@ function amplitudeSpectrum(real, imag, Fs, chartDiv) {
       return 2 * x;
     }
   });
-  let f1 = Array.from({ length: L }, (x, i) => (i * Fs) / L);
+  let f1 = Array.from({ length: L }, (x, i) => (i * samplingRate) / L);
   f = f1.slice(0, L / 2 + 1);
 
   if (f != null) {
@@ -48,4 +48,4 @@ function amplitudeSpectrum(real, imag, Fs, chartDiv) {
   }
 }
 
-export {amplitudeSpectrum};
+export { amplitudeSpectrum };

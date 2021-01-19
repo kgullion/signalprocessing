@@ -1,4 +1,4 @@
-import { transform } from './transform.js'
+import { transform, inverseTransform } from './transform.js'
 
 function fft(inputReal, inputImag = null) {
   let XImag = null;
@@ -45,7 +45,14 @@ function fft(inputReal, inputImag = null) {
   return { real, imag }
 }
 
-export { fft };
+
+function ifft(inputReal, inputImag) {
+
+  let { real, imag } = fft(inputImag, inputReal);
+  return { real, imag }
+}
+
+export { fft, ifft };
 
 
 

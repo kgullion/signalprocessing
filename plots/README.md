@@ -35,7 +35,7 @@ let t = Array.from({ length: L }, (x, i) => i * T);
 //A signal containing a 30 Hz sinusoid of amplitude 0.5 and a 100 Hz sinusoid of amplitude 1.
 let S = Array.from(t, (x, i) => 0.5 * Math.sin(2 * Math.PI * 30 * x) + Math.sin(2 * Math.PI * 100 * x));
 //Compute the Fourier transform of the signal.
-let { real, imag } = fft(S);
+let [ real, imag ] = fft(S);
 //Plot amplitude spectrum 
 amplitudeSpectrum(real, imag, Fs, "myDiv");
 //myDiv is id of html div element

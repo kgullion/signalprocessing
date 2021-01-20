@@ -23,7 +23,9 @@
     "url": "https://github.com/yusufsaygili/signalprocessing/issues"
   },
   "homepage": "https://github.com/yusufsaygili/signalprocessing#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@signalprocessing/windows": "^1.0.1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

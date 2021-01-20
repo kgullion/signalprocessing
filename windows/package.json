@@ -1,0 +1,26 @@
+{
+  "name": "@signalprocessing/windows",
+  "version": "1.0.0",
+  "description": "Windowing functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [
+    "windows",
+    "windowing",
+    "function",
+    "hann",
+    "hamming",
+    "tukey",
+    "flat-top",
+    "rectangular",
+    "kaiser",
+    "triang"
+  ],
+  "author": "Yusuf Saygili",
+  "license": "MIT",
+  "dependencies": {
+  }
+}

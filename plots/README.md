@@ -1,4 +1,4 @@
-# Signal Processing Plots Module
+# Signal Processing
 
 The Signal Processing **Plots** module is designed for plotting signals.
 
@@ -16,7 +16,7 @@ npm install @signalprocessing/plots --save
 
 Signal processing library use ES6 module format. You should add `"type: module" ` declaration in to your `package.json` file. Plotting module depends on `@signalprocessing/transforms`.
 
-Firstly, install transform module
+Firstly, install transforms module
 
 ```bash
 npm install  @signalprocessing/transforms --save
@@ -47,10 +47,10 @@ let S = Array.from(
 let [real, imag] = fft(S);
 //Plot amplitude spectrum
 amplitudeSpectrum(real, imag, Fs, "myDiv");
-//myDiv is id of html div element
+//myDiv is id of html div element to create plot chart on it.
 ```
 
-2. Create index.html and add index.js as script into your html file.
+2. Create index.html and add index.js as script into your html file. Then create div element with id ```myDiv```
 
 ```html
 <html lang="en">
@@ -71,7 +71,7 @@ amplitudeSpectrum(real, imag, Fs, "myDiv");
 
 3. In **Node**, there is no browser window. So you should create a web server to serve html file.
 
-- To simplify this step I am using **Parcel** and **cross-env** modules.
+- To simplify this step I am using **Parcel** and **cross-env** modules. If you have already setup your http server and serve your html page, then you may skip these step. However, I am strongly recommending you to use cross-env and Parcel to make your code works on different platforms.
 - Install and save these modules as development.
 
 ```bash

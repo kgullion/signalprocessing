@@ -13,7 +13,9 @@
     "fast",
     "fourier",
     "transform",
-    "matlab style fft"
+    "matlab style fft",
+    "inverse fft",
+    "ifft"
   ],
   "author": "Yusuf Saygili",
   "license": "MIT",

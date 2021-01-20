@@ -74,6 +74,25 @@ console.log(imagSignal)
 
 ```
 
+## ToDo List ##
+This module is under active maintenance. I am planning to add some new features under ```@signalprocessing``` as listed below in the next few weeks.
+* Short Time Fourier Transform,
+* Hilbert Transform,
+* Z-transform,
+* Wavelet Transform
+* Cepstrum,
+* Envelope,
+* Empirical mode decomposition,
+
+I am also planning to add some other modules in this year.
+
+* Windowing functions module,
+* Filters module, 
+* Correlation module, 
+* Some pre-ready signals module that includes chirp, sine sweep, pulse signals etc., 
+* Modal analysis that will help to extract modal parameters from measured signals such as natural frequency, damping, mode shapes etc., 
+* User interface module that will add interactivity on browser. 
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

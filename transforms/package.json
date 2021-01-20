@@ -1,8 +1,8 @@
 {
   "name": "@signalprocessing/transforms",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": " FFT ",
-  "main": "fft.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yusufsaygili/signalprocessing.git"

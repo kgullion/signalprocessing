@@ -1,3 +1,3 @@
-import { amplitudeSpectrum } from "./plot.js"
+import { amplitudeSpectrum } from "./plots.js"
 
 export { amplitudeSpectrum };

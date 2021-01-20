@@ -66,21 +66,4 @@ function rect(L) {
     return w
 }
 
-
-function tukey(L, r = 0.5) {
-    if (!Number.isInteger(L) && L < 1) {
-        throw "Length must be integer and non negative";
-    }
-    let T = null;
-    if (0<=x<=) {
-        T = L - 1;
-    } else if (type === "periodic") {
-        T = L;
-    }
-    else {
-        throw "Type of hamming window must be periodic or symmetric"
-    }
-    let w = Array.from({ length: L }, (x, i) => 0.5 * (1 - Math.cos(2 * Math.PI * (i / T))));
-    return w
-}
 export { hamming, hann, flattop, rect }

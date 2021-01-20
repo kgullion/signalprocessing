@@ -1,3 +1,3 @@
 import { hamming, hann, flattop ,rect} from "./windows";
 
-export { hamming, hann, flattop ,rect}
+export { hamming, hann, flattop, rect }

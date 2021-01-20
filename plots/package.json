@@ -1,6 +1,6 @@
 {
   "name": "@signalprocessing/plots",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "plot",
   "main": "index.js",
   "scripts": {

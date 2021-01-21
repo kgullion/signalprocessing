@@ -97,6 +97,7 @@ cross-env NODE_ENV=development parcel index.html --no-hmr --open
 ```node
 npm run watch
 ```
+![Amplitude Spectrum](https://github.com/yusufsaygili/signalprocessing/blob/master/plots/test/amplitudeSpectrum.png?raw=true)
 
 ## License
 

@@ -52,7 +52,6 @@ import {flattop} from "@signalprocessing/windows"
 //Length of signal
 let L = 1500;
 let w = flattop(L);
-let wP = flattop(L,"periodic");
 console.log(w);
 ```
 ### Rect Window

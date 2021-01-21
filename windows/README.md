@@ -16,6 +16,8 @@ npm install @signalprocessing/windows --save
 
 Signal processing library use ES6 module format. You should add `"type: module" ` declaration in to your `package.json` file. 
 
+Check [docs](https://www.mathworks.com/help/signal/windows.html) for the explanation of windowing functions.
+
 ### Hamming Window
 
 ```node
@@ -116,7 +118,7 @@ let L = 1500;
 let w = bohman(L);
 console.log(w);
 ```
-
+This module is actively evolving. I am planning to add ```Tukey, Kaiser, Parzen, Taylor, Gauss, Triangular and Chebyshev``` windowing functions soon.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

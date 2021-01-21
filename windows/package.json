@@ -1,7 +1,7 @@
 {
   "name": "@signalprocessing/windows",
-  "version": "1.0.4",
-  "description": "Windowing functions, hann, hamming, flattop, barthan,blackman,blackmanharris",
+  "version": "1.0.6",
+  "description": "Windowing functions",
   "main": "index.js",
   "scripts": {},
   "type": "module",

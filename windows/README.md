@@ -23,12 +23,11 @@ import {hamming} from "@signalprocessing/windows"
 
 //Length of signal
 let L = 1500;
-let w = hamming (L);
+let w = hamming(L);
 //Default type of windowing function is symmetric. You may change it to periodic.
-let wP = hamming (L,"periodic");
+let wP = hamming(L,"periodic");
 console.log(w);
 console.log(wP);
-
 ```
 ### Hann Window
 
@@ -42,7 +41,6 @@ let w = hann(L);
 let wP = hann(L,"periodic");
 console.log(w);
 console.log(wP);
-
 ```
 ### Flattop Window
 
@@ -52,11 +50,8 @@ import {flattop} from "@signalprocessing/windows"
 //Length of signal
 let L = 1500;
 let w = flattop(L);
-//Default type of windowing function is symmetric. You may change it to periodic.
 let wP = flattop(L,"periodic");
 console.log(w);
-console.log(wP);
-
 ```
 ### Rect Window
 
@@ -66,11 +61,60 @@ import {rect} from "@signalprocessing/windows"
 //Length of signal
 let L = 1500;
 let w = rect(L);
+console.log(w);
+```
+### Barthann Window
+
+```node
+import {barthann} from "@signalprocessing/windows"
+
+//Length of signal
+let L = 1500;
+let w = barthann(L);
+console.log(w);
+```
+### Bartlett Window
+```node
+import {bartlett} from "@signalprocessing/windows"
+
+//Length of signal
+let L = 1500;
+let w = bartlett(L);
+console.log(w);
+```
+### Blackman Window
+
+```node
+import {blackman} from "@signalprocessing/windows"
+
+//Length of signal
+let L = 1500;
+let w = blackman(L);
 //Default type of windowing function is symmetric. You may change it to periodic.
-let wP = rect(L);
+let wP = blackman(L,"periodic");
 console.log(w);
 console.log(wP);
+```
+### Blackmanharris Window
+```node
+import {blackmanharris} from "@signalprocessing/windows"
 
+//Length of signal
+let L = 1500;
+let w = blackmanharris(L);
+//Default type of windowing function is symmetric. You may change it to periodic.
+let wP = blackmanharris(L,"periodic");
+console.log(w);
+console.log(wP);
+```
+### Bohman Window
+```node
+import {bohman} from "@signalprocessing/windows"
+
+//Length of signal
+let L = 1500;
+let w = bohman(L);
+console.log(w);
 ```
 
 ## License

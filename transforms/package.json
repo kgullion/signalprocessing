@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/yusufsaygili/signalprocessing#readme",
   "dependencies": {
-    "@signalprocessing/windows": "^1.0.1"
+    "@signalprocessing/windows": "^1.0.4"
   },
   "devDependencies": {},
   "scripts": {

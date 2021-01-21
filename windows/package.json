@@ -1,10 +1,9 @@
 {
   "name": "@signalprocessing/windows",
-  "version": "1.0.3",
-  "description": "Windowing functions",
+  "version": "1.0.4",
+  "description": "Windowing functions, hann, hamming, flattop, barthan,blackman,blackmanharris",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "type": "module",
   "keywords": [
     "windows",
@@ -16,10 +15,13 @@
     "flat-top",
     "rectangular",
     "kaiser",
-    "triang"
+    "triang",
+    "barthann",
+    "blackman",
+    "blackmanharris",
+    "bohman"
   ],
   "author": "Yusuf Saygili",
   "license": "MIT",
-  "dependencies": {
-  }
+  "dependencies": {}
 }

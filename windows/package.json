@@ -1,7 +1,7 @@
 {
   "name": "@signalprocessing/windows",
   "version": "2.0.1",
-  "description": "Windowing functions",
+  "description": "The Signal Processing Windows module contains several windowing functions.",
   "scripts": {
     "build-commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir build-commonjs",
     "build-es": "cross-env BABEL_ENV=es babel src --out-dir build-es"
@@ -16,11 +16,8 @@
     "function",
     "hann",
     "hamming",
-    "tukey",
     "flat-top",
     "rectangular",
-    "kaiser",
-    "triang",
     "barthann",
     "blackman",
     "blackmanharris",

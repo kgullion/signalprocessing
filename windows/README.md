@@ -1,6 +1,6 @@
 # Signal Processing
 
-The Signal Processing **Windows** module contains several windowing functions.
+The Signal Processing Windows module contains several windowing functions.
 
 ## Install
 

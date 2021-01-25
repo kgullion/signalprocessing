@@ -26,7 +26,13 @@
  * The vector can have any length. This is a wrapper function.
  */
 
-export function transform(real, imag) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.transform = transform;
+exports.inverseTransform = inverseTransform;
+
+function transform(real, imag) {
   var n = real.length;
   if (n != imag.length) throw "Mismatched lengths";
   if (n == 0) return;else if ((n & n - 1) == 0) // Is power of 2
@@ -38,13 +44,15 @@ export function transform(real, imag) {
  * The vector can have any length. This is a wrapper function. This transform does not perform scaling, so the inverse is not a true inverse.
  */
 
-export function inverseTransform(real, imag) {
+
+function inverseTransform(real, imag) {
   transform(imag, real);
 }
 /*
  * Computes the discrete Fourier transform (DFT) of the given complex vector, storing the result back into the vector.
  * The vector's length must be a power of 2. Uses the Cooley-Tukey decimation-in-time radix-2 algorithm.
  */
+
 
 function transformRadix2(real, imag) {
   // Length variables
@@ -125,7 +133,9 @@ function transformBluestein(real, imag) {
   if (n != imag.length) throw "Mismatched lengths";
   var m = 1;
 
-  while (m < n * 2 + 1) m *= 2; // Trigonometric tables
+  while (m < n * 2 + 1) {
+    m *= 2;
+  } // Trigonometric tables
 
 
   var cosTable = new Array(n);
@@ -210,7 +220,9 @@ function convolveComplex(xreal, ximag, yreal, yimag, outreal, outimag) {
 function newArrayOfZeros(n) {
   var result = [];
 
-  for (var i = 0; i < n; i++) result.push(0);
+  for (var i = 0; i < n; i++) {
+    result.push(0);
+  }
 
   return result;
 }

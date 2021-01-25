@@ -125,7 +125,9 @@ function transformBluestein(real, imag) {
   if (n != imag.length) throw "Mismatched lengths";
   var m = 1;
 
-  while (m < n * 2 + 1) m *= 2; // Trigonometric tables
+  while (m < n * 2 + 1) {
+    m *= 2;
+  } // Trigonometric tables
 
 
   var cosTable = new Array(n);
@@ -210,7 +212,9 @@ function convolveComplex(xreal, ximag, yreal, yimag, outreal, outimag) {
 function newArrayOfZeros(n) {
   var result = [];
 
-  for (var i = 0; i < n; i++) result.push(0);
+  for (var i = 0; i < n; i++) {
+    result.push(0);
+  }
 
   return result;
 }

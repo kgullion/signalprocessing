@@ -1,6 +1,6 @@
 {
   "name": "@signalprocessing/transforms",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Ultra FFT and inverse FFT and more",
   "scripts": {
     "build-commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir build-commonjs",

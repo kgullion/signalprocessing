@@ -7,8 +7,8 @@ Signal Processing Transforms module is designed for extracting useful informatio
 npm install @signalprocessing/transforms --save
 ```
 ## Usage
-`@signalprocessing/windows` module can be both imported as commonJS module or ES module.
-## Fast Fourier Transform ( fft )
+`@signalprocessing/windows` module can be both imported as commonJS or ES module.
+- ## Fast Fourier Transform ( fft )
 This function implements fast Fourier transform  of the given real or complex signal. 
 
 For the real signal, input parameter can be real array as ```let [realCoef, imagCoef] = fft(realSignal)``` .
@@ -37,12 +37,12 @@ let S = Array.from(t, (x, i) => 0.5 * Math.sin(2 * Math.PI * 30 * x) + Math.sin(
 let [realCoef, imagCoef] = transforms.fft(S);
 ```
 
-## Inverse Fast Fourier Transform ( ifft )
+- ## Inverse Fast Fourier Transform ( ifft )
 This function implements inverse fast Fourier transform  of the given signal. 
 
 Input parameters should be splitted into the real and imaginary arrays as ```let [realPart, imagPart] =ifft(realCoefficients,ImaginaryCoeffients)```.
 
-If you have signal ```A``` then you should get ```ifff(fft(A)) == A``` with some numerical difference.
+If you have the signal ```A``` then you should get ```ifff(fft(A)) == A``` with some numerical difference.
 
 ```node
 let transforms=require("@signalprocessing/transforms")

@@ -1,10 +1,15 @@
 {
   "name": "@signalprocessing/windows",
-  "version": "1.0.7",
+  "version": "2.0.1",
   "description": "Windowing functions",
-  "main": "index.js",
-  "scripts": {},
-  "type": "module",
+  "scripts": {
+    "build-commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir build-commonjs",
+    "build-es": "cross-env BABEL_ENV=es babel src --out-dir build-es"
+  },
+  "jsnext:main": "./build-es/index.js",
+  "main": "./build-commonjs/index.js",
+  "module": "./build-es/index.js",
+  "types": "./declarations/windows.d.ts",
   "keywords": [
     "windows",
     "windowing",
@@ -21,6 +26,14 @@
     "blackmanharris",
     "bohman"
   ],
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "cross-env": "^7.0.3"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
   "author": "Yusuf Saygili",
   "license": "MIT",
   "dependencies": {}

@@ -1,12 +1,8 @@
 # Signal Processing
 
-The Signal Processing **windows** module contains several windowing functions.
+The Signal Processing **Windows** module contains several windowing functions.
 
-## Installation
-
-Each module can be installed under `@signalprocessing` scope.
-
-For example, to install **windows** module, use :
+## Install
 
 ```bash
 npm install @signalprocessing/windows --save
@@ -14,110 +10,91 @@ npm install @signalprocessing/windows --save
 
 ## Usage
 
-Signal processing library use ES6 module format. You should add `"type: module" ` declaration in to your `package.json` file. 
+Check external [docs](https://www.mathworks.com/help/signal/windows.html) for the detailed explanation of windowing functions.
 
-Check [docs](https://www.mathworks.com/help/signal/windows.html) for the explanation of windowing functions.
-
-### Hamming Window
+`@signalprocessing/windows` module can be both imported as commonJS module or ES module.
 
 ```node
-import {hamming} from "@signalprocessing/windows"
+let windows = require("@signalprocessing/windows");
+```
 
+```node
 //Length of signal
 let L = 1500;
-let w = hamming(L);
+```
+
+- ### Hamming Window
+
+```node
+let wm = windows.hamming(L);
+
 //Default type of windowing function is symmetric. You may change it to periodic.
-let wP = hamming(L,"periodic");
-console.log(w);
-console.log(wP);
+
+let wmP = windows.hamming(L, "periodic");
 ```
-### Hann Window
+
+- ### Hann Window
 
 ```node
-import {hann} from "@signalprocessing/windows"
+let wh = windows.hann(L);
 
-//Length of signal
-let L = 1500;
-let w = hann(L);
 //Default type of windowing function is symmetric. You may change it to periodic.
-let wP = hann(L,"periodic");
-console.log(w);
-console.log(wP);
+
+let whP = windows.hann(L, "periodic");
 ```
-### Flattop Window
+
+- ### Flattop Window
 
 ```node
-import {flattop} from "@signalprocessing/windows"
-
-//Length of signal
-let L = 1500;
-let w = flattop(L);
-console.log(w);
+let wf = windows.flattop(L);
 ```
-### Rect Window
+
+- ### Rect Window
 
 ```node
-import {rect} from "@signalprocessing/windows"
-
-//Length of signal
-let L = 1500;
-let w = rect(L);
-console.log(w);
+let wr = windows.rect(L);
 ```
-### Barthann Window
+
+- ### Barthann Window
 
 ```node
-import {barthann} from "@signalprocessing/windows"
-
-//Length of signal
-let L = 1500;
-let w = barthann(L);
-console.log(w);
+let wb = windows.barthann(L);
 ```
-### Bartlett Window
-```node
-import {bartlett} from "@signalprocessing/windows"
 
-//Length of signal
-let L = 1500;
-let w = bartlett(L);
-console.log(w);
-```
-### Blackman Window
+- ### Bartlett Window
 
 ```node
-import {blackman} from "@signalprocessing/windows"
+let wr = windows.bartlett(L);
+```
 
-//Length of signal
-let L = 1500;
-let w = blackman(L);
+- ### Blackman Window
+
+```node
+let wbm = windows.blackman(L);
+
 //Default type of windowing function is symmetric. You may change it to periodic.
-let wP = blackman(L,"periodic");
-console.log(w);
-console.log(wP);
-```
-### Blackmanharris Window
-```node
-import {blackmanharris} from "@signalprocessing/windows"
 
-//Length of signal
-let L = 1500;
-let w = blackmanharris(L);
+let wbmP = windows.blackman(L, "periodic");
+```
+
+- ### Blackmanharris Window
+
+```node
+let wbh = windows.blackmanharris(L);
+
 //Default type of windowing function is symmetric. You may change it to periodic.
-let wP = blackmanharris(L,"periodic");
-console.log(w);
-console.log(wP);
-```
-### Bohman Window
-```node
-import {bohman} from "@signalprocessing/windows"
 
-//Length of signal
-let L = 1500;
-let w = bohman(L);
-console.log(w);
+let wbhP = windows.blackmanharris(L, "periodic");
 ```
-This module is actively evolving. I am planning to add ```Tukey, Kaiser, Parzen, Taylor, Gauss, Triangular and Chebyshev``` windowing functions soon.
+
+- ### Bohman Window
+
+```node
+let wmn = windows.bohman(L);
+```
+
+This module is actively evolving. I am planning to add `Tukey, Kaiser, Parzen, Taylor, Gauss, Triangular and Chebyshev` windowing functions soon.
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

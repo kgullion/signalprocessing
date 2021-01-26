@@ -1,11 +1,10 @@
 {
   "name": "@signalprocessing/plots",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "plot",
   "scripts": {
     "buildcommonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir build-commonjs",
-    "build-es": "cross-env BABEL_ENV=es babel src --out-dir build-es",
-    "watch": "cross-env NODE_ENV=development parcel test\\index.html --no-hmr --open"
+    "build-es": "cross-env BABEL_ENV=es babel src --out-dir build-es"
   },
   "jsnext:main": "./build-es/index.js",
   "main": "./build-commonjs/index.js",
@@ -21,7 +20,6 @@
     "spectrum",
     "single sided spectrum"
   ],
-
   "bugs": {
     "url": "https://github.com/yusufsaygili/signalprocessing/issues"
   },

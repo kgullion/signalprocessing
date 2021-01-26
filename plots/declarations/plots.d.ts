@@ -4,12 +4,17 @@
  */
 
 declare module "@signalprocessing/plots" {
-    /**
-     * 
-     * @param realCoefficients 
-     * @param imagCoefficients 
-     * @param samplingRate 
-     * @param chartDiv 
-     */
-    export function amplitudeSpectrum(realCoefficients:number[], imagCoefficients:number[], samplingRate:number, chartDiv:string): number[][];
+  /**
+   *
+   * @param realCoefficients
+   * @param imagCoefficients
+   * @param samplingRate
+   * @param chartDiv
+   */
+  export function amplitudeSpectrum(
+    realCoefficients: number[],
+    imagCoefficients: number[],
+    samplingRate: number,
+    chartDiv: string
+  ): void;
 }

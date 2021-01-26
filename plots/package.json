@@ -1,31 +1,44 @@
 {
   "name": "@signalprocessing/plots",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "description": "plot",
-  "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=development parcel test\\index.html --no-hmr --open  "
+    "buildcommonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir build-commonjs",
+    "build-es": "cross-env BABEL_ENV=es babel src --out-dir build-es",
+    "watch": "cross-env NODE_ENV=development parcel test\\index.html --no-hmr --open"
   },
-  "type": "module",
+  "jsnext:main": "./build-es/index.js",
+  "main": "./build-commonjs/index.js",
+  "module": "./build-es/index.js",
+  "types": "./declarations/plots.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yusufsaygili/signalprocessing.git"
   },
   "keywords": [
-    "plot"
+    "plot",
+    "amplitude",
+    "spectrum",
+    "single sided spectrum"
   ],
-  "author": "Yusuf Saygili",
-  "license": "MIT",
+
   "bugs": {
     "url": "https://github.com/yusufsaygili/signalprocessing/issues"
   },
   "homepage": "https://github.com/yusufsaygili/signalprocessing#readme",
   "dependencies": {
-    "@signalprocessing/transforms": "^1.1.5",
+    "@signalprocessing/transforms": "^2.0.1",
     "plotly.js-dist": "^1.58.4"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "parcel-bundler": "^1.12.4"
-  }
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@types/node": "^14.14.22",
+    "cross-env": "^7.0.3"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "author": "Yusuf Saygili",
+  "license": "MIT"
 }

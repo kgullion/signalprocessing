@@ -6,14 +6,14 @@ declare module "@signalprocessing/transforms" {
     /**
      * 
      * @param inputReal 
-     * @param inputReal 
+     * @param inputImag 
      */
-    export function fft(inputReal:number[],inputReal?:number[]):number[][]
+    export function fft(inputReal:number[],inputImag?:number[]):number[][]
     /**
      * 
      * @param realCoeff 
      * @param imagCoeff 
      */
-    export function fft(realCoeff:number[],imagCoeff:number[]):number[][]
+    export function ifft(realCoeff:number[],imagCoeff:number[]):number[][]
 
 }

@@ -1,6 +1,6 @@
 {
   "name": "@signalprocessing/plots",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "plot",
   "scripts": {
     "buildcommonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir build-commonjs",

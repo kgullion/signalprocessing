@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/yusufsaygili/signalprocessing#readme",
   "dependencies": {
-    "@signalprocessing/transforms": "^2.0.1",
+    "@signalprocessing/transforms": "^2.0.2",
     "plotly.js-dist": "^1.58.4"
   },
   "devDependencies": {

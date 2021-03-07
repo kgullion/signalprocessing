@@ -15,5 +15,13 @@ Object.defineProperty(exports, "ifft", {
     return _fourier.ifft;
   }
 });
+Object.defineProperty(exports, "hilbert", {
+  enumerable: true,
+  get: function get() {
+    return _hilbert.hilbert;
+  }
+});
 
 var _fourier = require("./fourier.js");
+
+var _hilbert = require("./hilbert.js");

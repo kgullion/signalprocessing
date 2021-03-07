@@ -15,5 +15,9 @@ declare module "@signalprocessing/transforms" {
      * @param imagCoeff 
      */
     export function ifft(realCoeff:number[],imagCoeff:number[]):number[][]
-
+    /**
+     * 
+     * @param realCoeff 
+     */
+    export function hilbert(realCoeff:number[]):number[][]
 }

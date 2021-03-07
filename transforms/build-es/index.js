@@ -1,2 +1,3 @@
 import { fft, ifft } from "./fourier.js";
-export { fft, ifft };
+import { hilbert } from "./hilbert.js";
+export { fft, ifft, hilbert };

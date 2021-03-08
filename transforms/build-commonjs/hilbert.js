@@ -14,22 +14,19 @@ var _fourier = require("./fourier");
  */
 function hilbert(inputReal) {
   // let fft handle the typechecking
-  var x = (0, _fourier.fft)(inputReal); // using bitwise operators coerces N to integer, plus it's a bit faster
+  var x = (0, _fourier.fft)(inputReal); // double first half
 
-  var half = inputReal.length >> 1; // half == floor(N/2)
-  // double everything from h[1] to h[ceil(N/2)]
-  // backwards for loop is for performance reasons only, equivalent to
-  // for (i = 1; i < ceil(N/2); ++i)
+  var half = Math.ceil(inputReal.length / 2);
 
-  var i = half + ((inputReal.length & 1) << 1) - 1; // i == ceil(N/2) + 1
-
-  for (; --i;) {
+  for (var i = 1; i < half; ++i) {
     x[0][i] *= 2;
     x[1][i] *= 2;
-  } // zero out the rest
+  } // zero out the rest, leaving h[N/2] when N is even
 
 
-  for (i = half + 1; i < inputReal.length; ++i) {
+  if (inputReal.length % 2 === 0) ++half;
+
+  for (var i = half; i < inputReal.length; ++i) {
     x[0][i] = 0;
     x[1][i] = 0;
   }

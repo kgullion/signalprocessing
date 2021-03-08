@@ -8,20 +8,17 @@ import { fft } from "./fourier";
 function hilbert(inputReal) {
   // let fft handle the typechecking
   var x = fft(inputReal);
-  // using bitwise operators coerces N to integer, plus it's a bit faster
-  var half = inputReal.length >> 1; // half == floor(N/2)
 
-  // double everything from h[1] to h[ceil(N/2)]
-  // backwards for loop is for performance reasons only, equivalent to
-  // for (i = 1; i < ceil(N/2); ++i)
-  var i = half + ((inputReal.length & 1) << 1) - 1; // i == ceil(N/2) + 1
-  for (; --i; ) {
+  // double first half
+  var half = Math.ceil(inputReal.length / 2);
+  for (var i = 1; i < half; ++i) {
     x[0][i] *= 2;
     x[1][i] *= 2;
   }
 
-  // zero out the rest
-  for (i = half + 1; i < inputReal.length; ++i) {
+  // zero out the rest, leaving h[N/2] when N is even
+  if (inputReal.length % 2 === 0) ++half;
+  for (var i = half; i < inputReal.length; ++i) {
     x[0][i] = 0;
     x[1][i] = 0;
   }
